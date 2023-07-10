@@ -1,0 +1,121 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+//general rules
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+img {
+    max-width: 100%;
+}
+
+//layout
+.navbar {
+    background-color: #FF6D00;
+
+    .logo-sm {
+        display: block;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    @media  screen and (min-width: 556px) {
+        .logo-sm {
+            display: none;
+        }
+    
+        .logo {
+            display: block;
+        }
+    }
+}
+
+//welcome-page
+.rest-img {
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 999px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.welcome .card {
+    // width: 300px;
+    // height: 200px;
+    font-size: 2rem;
+    // background-color: #FF6D00;
+    border: 2px solid #FF6D00;
+    color: black;
+
+    .text-high {
+        font-weight: 700;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        font-style: italic;
+        text-decoration: underline;
+        color: #5A189A;
+
+        &:hover{
+            color: #FF6D00;
+        }
+    }
+
+}
+
+// login page
+.message-error {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+
+//register page
+.required-input::after {
+    content: ' *';
+    display: inline;
+    color: red;
+}
+
+.error-class {
+    border: 5px solid #FF6D00;
+}
+
+//index-page
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    img {
+        aspect-ratio: 18/9;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .card{
+
+        &:first-child{
+            height: 100%;
+
+            &:hover{
+                cursor: pointer;
+                background-color: #5A189A;
+                color: white;
+            }
+        }
+
+
+        // &:hover {
+        //     cursor: pointer;
+        //     background-color: #5A189A;
+        //     color: white;
+        // }
+    }
+}
